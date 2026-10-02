@@ -558,7 +558,7 @@ var cnames_active = {
   "ckkibet": "ckkibet.github.io",
   "clabe-validator": "center-key.github.io/clabe-validator",
   "clark": "clarkdo.github.io/new-blog",
-  "clarkdo": "clarkdo.github.io",
+  "inves": "indoinves.github.io/js/",
   "clashofclans": "clashperk.github.io/clashofclans.js",
   "classic": "joeleeofficial.github.io/Classic",
   "classroom": "epoxydevelopment.github.io/Classroom",
