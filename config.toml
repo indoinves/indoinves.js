@@ -1,4 +1,4 @@
-baseURL = "https://js.org/"
+baseURL = "https://indoinves.js.org/"
 title = "JS.ORG"
 
 disableKinds = ["taxonomy","term","RSS"]
