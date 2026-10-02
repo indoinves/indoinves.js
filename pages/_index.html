@@ -1,47 +1,227 @@
----
-layout: base
-title: the JavaScript organization
-full: true
-sitemap:
-priority: 1.0
-changefreq: yearly
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indoinves - Comprehensive Market, Finance, and Global Insights</title>
+    <meta name="description" content="Indoinves delivers authoritative insights on Market & Finance, Macro Economy, Business News, Technology, Real Estate, and Global Politics." />
+    <meta name="keywords" content="Indoinves, Business News, Macro Economy, Market & Finance, Tech, Global Economy" />
 
-<p class="bigger">Are you a JavaScript developer looking for free webspace to host your project?<br>Check out <a title="GitHub Pages" target="_blank" rel="nofollow noreferrer noopener" href="https://pages.github.com/">GitHub Pages</a>. To make things perfect we provide you with a free and sleek URL like one of these:</p>
-<p><em id="typewriter" class="tri">https://<span id="hermes">foo</span>.js.org</em></p>
-<p>Your page just has to <em>provide some reasonable content with a clear connection to JavaScript!</em> Follow these four steps to get your own free JS.ORG subdomain for your GitHub Page:</p>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Indoinves - Comprehensive Market, Finance, and Global Insights" />
+    <meta property="og:description" content="Get the latest updates on Financial Markets, Technology, and Business News worldwide." />
+    <meta property="og:image" content="https://indoinves.github.io/indoinves.jpg" />
+    <meta property="og:url" content="https://indoinves.github.io/" />
+    <meta property="og:type" content="website" />
 
-<section>
-    <input id="s1I" name="step" type="radio" checked="checked">
-    <article>
-        <h3>1</h3>If you haven't already, now it's time to log in to your GitHub account and set up your GitHub Page by following the instructions <a title="GitHub Pages" target="_blank" rel="nofollow noreferrer noopener" href="https://pages.github.com/">here</a>.<br>Make sure to add some reasonable content to your new page.
-    </article>
-    <input id="s2I" name="step" type="radio">
-    <article>
-        <h3>2</h3>Now you should determine your js.org subdomain: either choose your username or the name of your repo according to the existing GitHub Pages URL (for http://foo.github.io/bar, either "foo.js.org" or "bar.js.org" would be possible). More details in the <a title="JS.ORG's Wiki" target="_blank" rel="nofollow noreferrer noopener" href="https://github.com/js-org/js.org/wiki">wiki</a>.
-    </article>
-    <input id="s3I" name="step" type="radio">
-    <article>
-        <h3>3</h3>Add a file named "CNAME" to your repo (in the "gh-pages" branch for project pages) with a single line matching the domain you have chosen (e.g. "foo.js.org" without quotes). If you face any problems, check out the section about <a title="GitHub Pages Help" target="_blank" rel="nofollow noreferrer noopener" href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/#creating-and-committing-a-cname-file">Custom URLs</a> at GitHub Pages Help.
-    </article>
-    <input id="s4I" name="step" type="radio">
-    <article>
-        <h3>4</h3>To finish the procedure, make a pull request in our GitHub <a title="JS.ORGs repository" rel="nofollow noreferrer noopener" href="https://github.com/js-org/js.org/tree/master" target="_blank">repository</a> that adds your subdomain to the list of existing JS.ORG domains. Your new URL should go live within 24 hours (keep an eye on your pull request in case of a naming conflict or a question from our side).
-    </article>
+    <!-- Favicon -->
+    <link rel="icon" href="https://indoinves.github.io/indoinves.png" type="image/png" />
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; line-height: 1.6; }
+        header { background: #111; color: #fff; padding: 15px 0; border-bottom: 3px solid #d4af37; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo-container img { height: 40px; }
+        .search-box input { padding: 8px 12px; width: 250px; border-radius: 4px; border: 1px solid #ccc; }
+        nav { background: #222; color: #fff; position: relative; }
+        .nav-wrap { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .menu-toggle { background: none; border: none; color: #fff; font-size: 18px; cursor: pointer; padding: 15px; display: none; }
+        .nav-container { list-style: none; display: flex; flex-wrap: wrap; margin: 0; padding: 0; }
+        .nav-container li a { display: block; color: #fff; padding: 15px 15px; text-decoration: none; font-size: 14px; transition: background 0.3s; }
+        .nav-container li a:hover { background: #d4af37; color: #111; }
+        
+        .main-layout { max-width: 1200px; margin: 30px auto; display: flex; gap: 30px; padding: 0 20px; }
+        .content-area { flex: 3; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .sidebar-area { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+        
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 20px; }
+        .category-card { background: #f4f4f4; padding: 12px; text-align: center; border-radius: 6px; text-decoration: none; color: #333; font-weight: bold; font-size: 13px; transition: all 0.3s; border: 1px solid #e0e0e0; }
+        .category-card:hover { background: #d4af37; color: #111; border-color: #d4af37; }
+
+        .widget { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .widget h3 { margin-top: 0; font-size: 18px; border-bottom: 2px solid #d4af37; padding-bottom: 8px; }
+        .widget ul { padding-left: 20px; margin: 0; }
+        .widget ul li { margin-bottom: 10px; }
+        .widget ul li a { color: #0066cc; text-decoration: none; }
+        .widget ul li a:hover { text-decoration: underline; }
+        
+        footer { background: #111; color: #fff; padding: 50px 0 20px 0; margin-top: 50px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; padding: 0 20px; }
+        .footer-col h4 { color: #d4af37; font-size: 16px; margin-bottom: 15px; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col ul li a { color: #ccc; text-decoration: none; font-size: 14px; }
+        .footer-col ul li a:hover { color: #fff; }
+        .footer-col p { color: #aaa; font-size: 14px; line-height: 1.5; }
+        .footer-bottom { text-align: center; border-top: 1px solid #333; margin-top: 40px; padding-top: 20px; font-size: 13px; color: #888; }
+        
+        @media(max-width: 768px) {
+            .main-layout { flex-direction: column; }
+            .nav-container { display: none; width: 100%; flex-direction: column; }
+            .nav-container.active { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="https://indoinves.github.io/">
+                    <img src="https://indoinves.github.io/indoinves.png" alt="Indoinves Logo">
+                </a>
+            </div>
+            <div class="search-box">
+                <form action="https://indoinves.github.io/" method="GET">
+                    <input type="text" placeholder="Search news, markets..." />
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigasi Utama -->
     <nav>
-        <label id="s1L" for="s1I">1</label>
-        <label id="s2L" for="s2I">2</label>
-        <label id="s3L" for="s3I">3</label>
-        <label id="s4L" for="s4I">4</label>
+        <div class="nav-wrap">
+            <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation">&#9776; Menu</button>
+            <ul class="nav-container" id="main-nav-list">
+                <li><a href="https://indoinves.github.io/">Home</a></li>
+                <li><a href="https://indoinves.github.io/blog/market/">Market</a></li>
+                <li><a href="https://indoinves.github.io/blog/finance/">Finance</a></li>
+                <li><a href="https://indoinves.github.io/blog/macro/">Macro</a></li>
+                <li><a href="https://indoinves.github.io/blog/economy/">Economy</a></li>
+                <li><a href="https://indoinves.github.io/blog/tech/">Tech</a></li>
+                <li><a href="https://indoinves.github.io/blog/property/">Property</a></li>
+            </ul>
+        </div>
     </nav>
-</section>
 
-<div id="xad" class="float">
-    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CESD4K3E&placement=jsorg" id="_carbonads_js"></script>
-    <span id="xad-blocked">Looks like your ad blocker worked.<br>This would have been a paid advertisement that meets the <a title="Acceptable Ads Standard" target="_blank" rel="nofollow noreferrer noopener" href="https://acceptableads.com/standard/">Acceptable Ads Standard</a>.</span>
-</div>
+    <div class="main-layout">
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <h1>Welcome to Indoinves Portal</h1>
+            <p><em>Authoritative Global News, Market Intelligence, and Strategic Macroeconomic Insights</em></p>
+            
+            <p>Explore our comprehensive directory featuring 68 categorized channels, each containing up to 30 targeted analytical reports designed for investors, policymakers, and industry professionals worldwide.</p>
 
-<p><em class="tri">Important</em>As the owner of the repository, you keep complete control over your published content. But that also means that all rights and duties that come along with publishing a website remain in your responsibility.</p>
-<p><em>Have a look at our <a title="Terms and Conditions" href="/terms.html">Terms and Conditions</a></em> for more details.</p>
+            <h2>Explore All Categories (68 Directories)</h2>
+            <div class="category-grid" id="categoryGrid">
+                <!-- Kategori akan dimuat otomatis via JavaScript -->
+            </div>
+        </main>
 
+        <!-- Sidebar Area -->
+        <aside class="sidebar-area">
+            <div class="widget">
+                <h3>News Articles</h3>
+                <ul>
+                    <li><a href="https://indoinves.github.io/blog/news/artikel1.html">Global Markets Rally Amid New Economic Policy Shifts</a></li>
+                    <li><a href="https://indoinves.github.io/blog/economy/artikel1.html">Central Banks Announce Synchronized Liquidity Frameworks</a></li>
+                    <li><a href="https://indoinves.github.io/blog/tech/artikel1.html">AI Governance Protocols Approved by International Coalition</a></li>
+                </ul>
+            </div>
 
+            <div class="widget">
+                <h3>Artikel Popular</h3>
+                <ul>
+                    <li><a href="https://indoinves.github.io/blog/market/artikel1.html">Mastering Equity Valuations in High-Inflation Eras</a></li>
+                    <li><a href="https://indoinves.github.io/blog/property/artikel1.html">Real Estate Investment Trusts: 2026 Strategic Playbook</a></li>
+                    <li><a href="https://indoinves.github.io/blog/finance/artikel1.html">Digital Currencies and the Future of Central Banking</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Label</h3>
+                <p>
+                    <a href="https://indoinves.github.io/blog/market/" style="display:inline-block; background:#eee; padding:5px 10px; margin:3px; border-radius:3px; font-size:12px; text-decoration:none; color:#333;">Market</a>
+                    <a href="https://indoinves.github.io/blog/finance/" style="display:inline-block; background:#eee; padding:5px 10px; margin:3px; border-radius:3px; font-size:12px; text-decoration:none; color:#333;">Finance</a>
+                    <a href="https://indoinves.github.io/blog/macro/" style="display:inline-block; background:#eee; padding:5px 10px; margin:3px; border-radius:3px; font-size:12px; text-decoration:none; color:#333;">Macro</a>
+                    <a href="https://indoinves.github.io/blog/tech/" style="display:inline-block; background:#eee; padding:5px 10px; margin:3px; border-radius:3px; font-size:12px; text-decoration:none; color:#333;">Tech</a>
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="https://indoinves.github.io/indoinves.png" alt="Indoinves Logo" style="height: 35px; margin-bottom: 15px; filter: brightness(0) invert(1);">
+                <p>Indoinves is an authoritative digital publication delivering high-impact news, macroeconomic analysis, financial market intelligence, and structural business insights.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Tools Free Indoinves</h4>
+                <ul>
+                    <li><a href="https://indoinves.github.io/tools/banklocator.html">Tools Peta & Direktori Bank Global</a></li>
+                    <li><a href="https://indoinves.github.io/tools/contentblog.html">Tools Konten Blog</a></li>
+                    <li><a href="https://indoinves.github.io/tools/investasi.html">Tools Kalkulator Investasi</a></li>
+                    <li><a href="https://indoinves.github.io/tools/saham.html">Tools Saham</a></li>
+                    <li><a href="https://indoinves.github.io/tools/simulatorkripto-pro.html">Tools Simulator Kripto Pro</a></li>
+                    <li><a href="https://indoinves.github.io/tools/simulatorkripto.html">Tools Simulator Kripto</a></li>
+                    <li><a href="https://indoinves.github.io/tools/simulatorsaham.html">Tools Simulator Saham</a></li>
+                    <li><a href="https://indoinves.github.io/tools/website.html">Tools Website / SEO Checker</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="https://indoinves.github.io/">Home</a></li>
+                    <li><a href="https://indoinves.github.io/about">About Us</a></li>
+                    <li><a href="https://indoinves.github.io/contact">Contact Us</a></li>
+                    <li><a href="https://indoinves.github.io/privacy">Privacy Policy</a></li>
+                    <li><a href="https://indoinves.github.io/sitemap">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Policies & Editorial</h4>
+                <ul>
+                    <li><a href="https://indoinves.github.io/disclaimer">Disclaimer</a></li>
+                    <li><a href="https://indoinves.github.io/terms">Terms On Conditional License</a></li>
+                    <li><a href="https://indoinves.github.io/editorial">Editorial Guidelines</a></li>
+                    <li><a href="https://indoinves.github.io/advertise">Advertise With Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Indoinves - All Rights Reserved. Secured via HTTPS.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle menu mobile responsive
+        document.getElementById('menu-toggle-btn').addEventListener('click', function() {
+            var navList = document.getElementById('main-nav-list');
+            navList.classList.toggle('active');
+        });
+
+        // Daftar kategori lengkap
+        const categories = [
+            "market", "finance", "macro", "micro", "economy", "explainers", "manufacturing", 
+            "property", "health", "education", "lifestyle", "hospitality", "tech", "media", 
+            "smes", "luxury", "whos-who", "international", "local-resources", "politics", 
+            "culture", "science", "public-policy", "business", "news", "sports", "arts", 
+            "celebrities", "automotive", "commentary", "interview", "money", "perbankan", 
+            "belanja", "sharia", "football", "opinion", "video", "kisah", "index", 
+            "sejarah", "entrepreneur", "research", "photo", "olahraga", "selebritis", 
+            "country", "dki", "diy", "jabar", "jatim", "jateng", "aceh", "papua", 
+            "kalimantan", "sumatra", "sulawesi", "bali", "asia", "afrika", "australia", 
+            "rusia", "eropa", "amerika", "ai", "teknologi", "astronomi", "zodiak", "maps"
+        ];
+
+        // Generate card kategori secara dinamis ke halaman utama
+        const gridContainer = document.getElementById('categoryGrid');
+        categories.forEach(cat => {
+            const formattedTitle = cat.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase());
+            const card = document.createElement('a');
+            card.className = 'category-card';
+            card.href = `https://indoinves.github.io/blog/${cat}/`;
+            card.textContent = formattedTitle;
+            gridContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>
