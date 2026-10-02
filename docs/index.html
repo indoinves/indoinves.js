@@ -1,8 +1,488 @@
-<!doctype html><html lang=en><head><link rel=canonical href=https://js.org/index.html><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>JS.ORG - the JavaScript organization</title><meta name=description content="Dedicated to JavaScript and its awesome community since 2015"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=/favicon.png sizes=16x16><link rel=icon type=image/png href=/ico/favicon-32.png sizes=32x32><link rel=icon type=image/svg+xml href=/ico/favicon.svg><link rel=apple-touch-icon href=/ico/apple-touch-icon.png><link rel=manifest href=/manifest.webmanifest><meta name=theme-color content="#FFE70B"><meta name=application-name content="JS.ORG"><meta name=twitter:card content="summary"><meta name=twitter:title content="JS.ORG"><meta name=twitter:site content="@JS_ORG"><meta name=twitter:description content="Dedicated to JavaScript and its awesome community since 2015"><meta name=twitter:image content="https://js.org/ico/512.png"><meta name=twitter:image:alt content="JS.ORG logo"><meta property="og:title" content="JS.ORG"><meta property="og:url" content="https://js.org/index.html"><meta property="og:image" content="https://js.org/jsorg_ogimage.png"><meta property="og:type" content="website"><meta property="og:description" content="Dedicated to JavaScript and its awesome community since 2015"><meta property="og:locale" content="en_US"><link rel=preload as=font type=font/woff2 crossorigin href=/fnt/source-sans-3-v9-latin-regular.woff2><link rel=preload as=font type=font/woff2 crossorigin href=/fnt/source-sans-3-v9-latin-600.woff2><style>@font-face{font-display:swap;font-family:'source sans 3';font-style:normal;font-weight:400;src:url(/fnt/source-sans-3-v9-latin-regular.woff2)format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-display:swap;font-family:'source sans 3';font-style:normal;font-weight:600;src:url(/fnt/source-sans-3-v9-latin-600.woff2)format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}html{scrollbar-color:rgba(0,0,0,.5)rgba(0,0,0,.7);scrollbar-width:thin;background:#ffe70b}body{padding:0 5%;font-family:"source sans 3",Arial,Helvetica,sans-serif;line-height:1.5;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;max-width:740px;margin:6vh auto;overflow-y:overlay}::selection{text-shadow:none;background:#000;color:#ffe70b}::-webkit-scrollbar{width:.5em}::-webkit-scrollbar-track{background:rgba(0,0,0,.7)}::-webkit-scrollbar-thumb{background:rgba(0,0,0,.5)}::-webkit-scrollbar-thumb:active{background:#000}svg{fill:currentColor}p{margin-top:.5em;line-height:1.6em}p.bigger{font-size:1.3em}h2,h3,h4{margin-top:1.5em;margin-bottom:0}a{color:currentColor;text-decoration:none;font-weight:600;text-decoration-thickness:1.4px;text-underline-offset:1px}.badge{display:inline-block;white-space:nowrap;line-height:1em;font-weight:600;overflow:hidden;background:#000}.badge span,.badge a{color:#fff;display:inline-block;padding:.5em .7em .5em 0;z-index:1}.badge span{pointer-events:none}.badge.gray,.badge .gray{background:#666!important}.badge.blue,.badge .blue{background:#0070f0!important}a.badge:hover,.badge a:hover{filter:brightness(80%)}.tri,.badge :first-child{position:relative;padding-left:.6em;padding-right:.5em;margin-right:.8em;background:#000}.tri:after,.badge :first-child:after{content:"";position:absolute;top:0;right:-1em;width:2em;height:2em;transform:scale(.3,.707)rotate(45deg);z-index:-1;background-color:inherit}em{font-style:normal;background:#000;color:#ffe70b;padding:.2em .5em;font-size:.85em;font-weight:600;-webkit-box-decoration-break:clone;box-decoration-break:clone}em.tri:after{width:1.65em!important;height:1.65em!important;right:-.825em!important}header,footer{display:flex;flex-wrap:wrap;justify-content:space-between;margin:30px 0;clear:both}header svg{margin-right:4px}footer{font-size:.8rem;line-height:1em}footer hr{margin:5px 0;border:none;flex-basis:100%;height:1.5px;background:#000}footer *{align-self:flex-end}.err{text-align:center;margin:2em 0}.err em{line-height:2em;font-size:2em;margin:1em 1em 1em .7em}.err p{margin:2em}#oc{display:none;margin-right:3px}@media only screen and (min-width:400px){#oc{display:inline-block}}@media only screen and (min-width:560px){.err{margin:3em 0 4em}.err em{min-width:330px;font-size:3em}.err p{margin:3em}}@media(prefers-color-scheme:dark){html{scrollbar-color:rgba(255,231,11,.5)rgba(255,231,11,.2);background:#000;color:#ffe70b}::selection{background:#ffe70b;color:#000}::-webkit-scrollbar-track{background:rgba(255,231,11,.2)}::-webkit-scrollbar-thumb{background:rgba(255,231,11,.5)}::-webkit-scrollbar-thumb:active{background:#ffe70b}em{background:#ffe70b;color:#000}.tri{background:#ffe70b}.badge,.badge :first-child{background:#333}footer hr{background:#ffe70b}}</style><style>p{margin:2em 0}#typewriter{padding-left:.4em;font-size:1.5em;line-height:1.25em;display:inline-block}#typewriter .active{border-right:.1em solid #ffe70b;padding-right:.1em;line-height:0}section{margin:1.8rem 0;color:#ffe70b}section input{position:absolute;opacity:0;left:-99px}section input:checked+article{display:inline-block}section input#s1I:checked~nav #s1L,section input#s2I:checked~nav #s2L,section input#s3I:checked~nav #s3L,section input#s4I:checked~nav #s4L{color:currentColor;background:#000}section nav{display:inline-table;border-collapse:collapse;margin:0}section nav label{color:#000;user-select:none;outline:none;cursor:pointer;display:table-cell;border:2px solid #000;border-top:none;left:0;font-weight:600;font-size:1em;height:2em;width:2em;line-height:2em;text-align:center;margin:0;padding:0;-moz-transition:all .3s;-o-transition:all .3s;-webkit-transition:all .3s;transition:all .3s}section nav label:hover{background:rgba(0,0,0,.2);color:#000}section article{display:none;background:#000;margin:0;padding:1.2em}section article h3{float:left;border-right:2px solid;font-size:4em;width:1em;padding-top:.2em;text-align:center;line-height:.75em;font-weight:600;margin:-.2em .3em .1em -.2em}em ::selection,section ::selection{color:#000;background:#ffe70b}em a,section a{font-weight:600;text-decoration:underline}em a:hover,section a:hover{color:rgba(255,231,11,.5)}#redir{display:none;clear:both}#redir em{margin:0 5em;display:block;text-align:center}@media only screen and (min-width:400px){#typewriter{font-size:2em}}@media only screen and (min-width:700px){#typewriter{font-size:3.5em}}@media(prefers-color-scheme:dark){#typewriter .active{border-right-color:#000}section{color:#000}section input#s1I:checked~nav #s1L,section input#s2I:checked~nav #s2L,section input#s3I:checked~nav #s3L,section input#s4I:checked~nav #s4L{background:#ffe70b}section nav label{color:#ffe70b;border-color:#ffe70b}section nav label:hover{background:rgba(255,231,11,.3);color:#ffe70b}section article{background:#ffe70b}em ::selection,section ::selection{color:#ffe70b;background:#000}em a:hover,section a:hover{color:rgba(0,0,0,.5)}}</style><style>#xad{position:relative;width:130px;margin:auto;min-height:100px;font-weight:600;display:flex;justify-content:center;flex-direction:column;line-height:1.4;transition:opacity 500ms;background-size:4px 100%,100% 4px,4px 100%,100% 4px;background-position:0 0,0 0,100% 0,0 100%;background-repeat:no-repeat;background-image:repeating-linear-gradient(0,#000,#000 20px,transparent 20px,transparent 28px,#000 28px),repeating-linear-gradient(90deg,#000,#000 20px,transparent 20px,transparent 28px,#000 28px),repeating-linear-gradient(180deg,#000,#000 20px,transparent 20px,transparent 28px,#000 28px),repeating-linear-gradient(270deg,#000,#000 20px,transparent 20px,transparent 28px,#000 28px)}@media(prefers-color-scheme:dark){#xad{background-image:repeating-linear-gradient(0,#FFE70B,#FFE70B 20px,transparent 20px,transparent 28px,#FFE70B 28px),repeating-linear-gradient(90deg,#FFE70B,#FFE70B 20px,transparent 20px,transparent 28px,#FFE70B 28px),repeating-linear-gradient(180deg,#FFE70B,#FFE70B 20px,transparent 20px,transparent 28px,#FFE70B 28px),repeating-linear-gradient(270deg,#FFE70B,#FFE70B 20px,transparent 20px,transparent 28px,#FFE70B 28px)}}#xad.float{position:relative;margin:6px 0 .5em 1em;float:right}#xad #xad-blocked{padding:1em;font-size:.85em;text-align:center;display:none}#xad #xad-blocked a{text-decoration:underline}#xad.blocked{opacity:.6}#xad.blocked #xad-blocked{display:block}#carbonads{top:0;display:flex;float:right;max-width:130px;background-color:#fff;font-size:11px;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,Helvetica,Arial,sans-serif}#carbonads *{margin:initial;padding:initial}#carbonads a{color:#111;text-decoration:none;font-weight:500}#carbonads a:hover{color:#111}#carbonads .carbon-img{display:block;margin-bottom:8px;max-width:130px;line-height:1}#carbonads .carbon-img img{display:block;margin:0 auto;max-width:130px;width:130px;height:auto}#carbonads .carbon-text{display:block;padding:0 10px 8px;text-align:left;line-height:1.35}#carbonads .carbon-poweredby{display:block;padding:10px;background:repeating-linear-gradient(-45deg,transparent,transparent 5px,rgba(0,0,0,.025) 5px,rgba(0,0,0,.025) 10px)rgba(241,243,244,.4);text-transform:uppercase;letter-spacing:.5px;font-weight:600;font-size:8px;line-height:0}@media only screen and (min-width:560px){#xad{width:330px;height:100px}#carbonads{max-width:330px}#carbonads .carbon-wrap{display:flex;flex-direction:row}#carbonads .carbon-img{margin:0}#carbonads .carbon-text{padding:10px 10px 0;font-size:12px}#carbonads .carbon-poweredby{position:absolute;right:0;bottom:0;border-top-left-radius:3px;text-align:center}}</style><link rel=preload href=/main.js as=script></head><body><header><div><svg xmlns="http://www.w3.org/2000/svg" width="204" height="100"><path id="logoJS" d="M0 0v1e2h1e2V0H0zm55 74.5C55 83 50.6 90 40.8 90c-6.7.0-11.2-2.6-14.3-8l6.8-5c1.6 3 3.9 4.4 6.2 4.4 3.6.0 5.5-1.8 5.5-7.7V45h10v29.5zM75.8 90c-5.8.0-11.9-2.2-16.4-6.4l5.7-6.8c3.2 2.7 7.3 4.6 11 4.6 4.2.0 6.2-1.6 6.2-4.3.0-2.8-2.5-3.7-6.4-5.3L70 69.4c-4.6-1.8-8.9-5.6-8.9-12.1.0-7.3 6.5-13.1 15.8-13.1 5.1.0 10.5 2 14.3 5.8l-5.1 6.3c-2.9-2.2-5.6-3.5-9.2-3.5-3.5.0-5.6 1.5-5.6 4 0 2.7 2.9 3.7 6.7 5.2l5.7 2.3c5.4 2.2 8.8 5.8 8.8 12 0 7.3-6.1 13.7-16.7 13.7z"/><path d="M115.8 75.1c0-8.8 5-13.8 12.2-13.8 7.3.0 12.2 5.1 12.2 13.8.0 8.8-5 14.1-12.2 14.1-7.3.0-12.2-5.3-12.2-14.1zm18.2.0c0-5.4-2.3-8.6-6-8.6s-6 3.2-6 8.6 2.3 8.8 6 8.8c3.7.1 6-3.4 6-8.8zm25.8 13.7-5.2-9.7h-3.3v9.7h-6.1v-27h9.7c5.7.0 10.4 2 10.4 8.4.0 4-1.9 6.5-4.8 7.8l6.1 10.8h-6.8zm-8.5-14.6h3.1c3.2.0 4.9-1.4 4.9-4s-1.7-3.5-4.9-3.5h-3.1v7.5zm18.1 1.2c0-8.9 6-14.1 13.1-14.1a11.78 11.78.0 018.5 3.5l-3.2 3.9c-1.4-1.2-2.8-2.1-5.1-2.1-4.2.0-7.1 3.3-7.1 8.7.0 5.5 2.5 8.7 7.6 8.7 1.1.0 2.2-.3 2.9-.8v-4.6h-4.5v-5h9.8V86c-1.9 1.8-5.1 3.3-8.9 3.3-7.3-.1-13.1-4.8-13.1-13.9zM199 5v90h-90V5h90m5-5H104v1e2h1e2V0z"/><defs><path id="logoORG" d="M11.6 129.1c0-8.8 5-13.8 12.2-13.8 7.3.0 12.2 5.1 12.2 13.8.0 8.8-5 14.1-12.2 14.1-7.3.0-12.2-5.3-12.2-14.1zm18.2-.5c0-5.4-2.3-8.6-6-8.6s-6 3.2-6 8.6 2.3 8.8 6 8.8 6-3.4 6-8.8zm25.9 14.2-5.2-9.7h-3.3v9.7h-6.1v-26.9h9.7c5.7.0 10.4 2 10.4 8.4.0 4-1.9 6.5-4.8 7.8l6.1 10.8h-6.8zm-8.6-15.2h3.1c3.2.0 4.9-1.4 4.9-4s-1.7-3.5-4.9-3.5h-3.1v7.5zm18.1 1.8c0-8.9 6-14.1 13.1-14.1a11.78 11.78.0 018.5 3.5l-3.2 3.9c-1.4-1.2-2.8-2.1-5.1-2.1-4.2.0-7.1 3.3-7.1 8.7.0 5.5 2.5 8.7 7.6 8.7 1.1.0 2.2-.3 2.9-.8v-4.6h-4.5v-5h9.8V140c-1.9 1.8-5.1 3.3-8.9 3.3-7.3-.1-13.1-4.8-13.1-13.9zM95 109v40H5v-40h90m5-5H0v50h1e2v-50z"/></defs></svg></div><div><div class="badge blue"><a title="JS.ORG on X" href=https://twitter.com/JS_ORG target=_blank rel="nofollow noreferrer noopener">𝗫</a>
-<a title="Post JS.ORG" href="https://twitter.com/share?url=https%3A%2F%2Fjs.org" target=_blank rel="nofollow noreferrer noopener">post this!</a></div></div></header><main><p class=bigger>Are you a JavaScript developer looking for free webspace to host your project?<br>Check out <a title="GitHub Pages" target=_blank rel="nofollow noreferrer noopener" href=https://pages.github.com/>GitHub Pages</a>. To make things perfect we provide you with a free and sleek URL like one of these:</p><p><em id=typewriter class=tri>https://<span id=hermes>foo</span>.js.org</em></p><p>Your page just has to <em>provide some reasonable content with a clear connection to JavaScript!</em> Follow these four steps to get your own free JS.ORG subdomain for your GitHub Page:</p><section><input id=s1I name=step type=radio checked><article><h3>1</h3>If you haven't already, now it's time to log in to your GitHub account and set up your GitHub Page by following the instructions <a title="GitHub Pages" target=_blank rel="nofollow noreferrer noopener" href=https://pages.github.com/>here</a>.<br>Make sure to add some reasonable content to your new page.</article><input id=s2I name=step type=radio><article><h3>2</h3>Now you should determine your js.org subdomain: either choose your username or the name of your repo according to the existing GitHub Pages URL (for http://foo.github.io/bar, either "foo.js.org" or "bar.js.org" would be possible). More details in the <a title="JS.ORG's Wiki" target=_blank rel="nofollow noreferrer noopener" href=https://github.com/js-org/js.org/wiki>wiki</a>.</article><input id=s3I name=step type=radio><article><h3>3</h3>Add a file named "CNAME" to your repo (in the "gh-pages" branch for project pages) with a single line matching the domain you have chosen (e.g. "foo.js.org" without quotes). If you face any problems, check out the section about <a title="GitHub Pages Help" target=_blank rel="nofollow noreferrer noopener" href=https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/#creating-and-committing-a-cname-file>Custom URLs</a> at GitHub Pages Help.</article><input id=s4I name=step type=radio><article><h3>4</h3>To finish the procedure, make a pull request in our GitHub <a title="JS.ORGs repository" rel="nofollow noreferrer noopener" href=https://github.com/js-org/js.org/tree/master target=_blank>repository</a> that adds your subdomain to the list of existing JS.ORG domains. Your new URL should go live within 24 hours (keep an eye on your pull request in case of a naming conflict or a question from our side).</article><nav><label id=s1L for=s1I>1</label>
-<label id=s2L for=s2I>2</label>
-<label id=s3L for=s3I>3</label>
-<label id=s4L for=s4I>4</label></nav></section><div id=xad class=float><script async type=text/javascript src="//cdn.carbonads.com/carbon.js?serve=CESD4K3E&placement=jsorg" id=_carbonads_js></script>
-<span id=xad-blocked>Looks like your ad blocker worked.<br>This would have been a paid advertisement that meets the <a title="Acceptable Ads Standard" target=_blank rel="nofollow noreferrer noopener" href=https://acceptableads.com/standard/>Acceptable Ads Standard</a>.</span></div><p><em class=tri>Important</em>As the owner of the repository, you keep complete control over your published content. But that also means that all rights and duties that come along with publishing a website remain in your responsibility.</p><p><em>Have a look at our <a title="Terms and Conditions" href=/terms.html>Terms and Conditions</a></em> for more details.</p></main><div id=badge-js></div><script src=//m.servedby-buysellads.com/monetization.custom.js></script>
-<script>(function(){typeof _bsa!="undefined"&&_bsa&&_bsa.init("custom","CWYDC23J","placement:jsorg-badge-banner",{target:"#badge-js",template:`<style>.bsa__##external_id## {background-image: linear-gradient(145deg,##backgroundColor##,90%,##backgroundColor##80),linear-gradient(##textColor## 1px, transparent 0),linear-gradient(90deg,##textColor## 1px,transparent 0);background-color: ##backgroundColor##;}</style><a class="badge-container bsa__##external_id##" style="background-color: ##backgroundColor##; color: ##textColor##; border-color: ##textColor##" href="##link##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##"><img class="badge-icon" style="background-color: ##backgroundColor##" src="##image##"><div class="badge-flex"><div class="badge-title">##company## — ##tagline##</div><div class="badge-description">##description##</div><img class="badge-logo" src="##logo##"><div class="badge-cta" style="background-color: ##ctaBackgroundColor##; color: ##ctaTextColor##">##callToAction##</div></div></a>`})})()</script><footer><div><a id=oc class="badge blue" title="Open Collective" href=https://opencollective.com/js-org target=_blank rel="nofollow noreferrer noopener"><span>Donate</span><span>for registrar fees</span></a>
-<a id=gh class="badge gray" title=GitHub href=https://github.com/js-org/js.org target=_blank rel="nofollow noreferrer noopener"><span>GitHub</span><span id=ghstars>4K</span></a></div><div><svg xmlns="http://www.w3.org/2000/svg" width="93" height="30"><use xlink:href="#logoJS" transform="scale(.3)"/><use xlink:href="#logoORG" transform="scale(.6) translate(53.6 -104)"/></svg></div><hr><span>WEBDESIGN: <a title="Werbeagentur Ansbach Webdesign" rel="noreferrer noopener" target=_blank href=https://www.20zweinull.de/>20zweinull</a></span><div><a href=/privacy.html target=_top title=Privacy>Privacy</a> ▪ <a href=/imprint.html target=_top title=Imprint>Imprint</a></div></footer><script type=text/javascript src=/main.js defer></script></body></html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8423475960451668" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-8423475960451668">
+    <meta name="google-site-verification" content="U1VAgdRlZJWlLXGlGnsAGbZA1TVBp2DG0c6XzQJNonY" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indoinves - Global Market, Finance, Macro Economy & Business News</title>
+    <meta name="description" content="Indoinves delivers authoritative insights on Market & Finance, Macro Economy, Business News, Technology, Real Estate, and Global Politics." />
+    <meta name="keywords" content="Indoinves, Business News, Macro Economy, Market & Finance, Tech, Global Economy" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/indoinves.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="/indoinves.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="/indoinves.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="/indoinves.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/indoinves.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/indoinves.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://indoinves.github.io/indoinves.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://indoinves.github.io/indoinves.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://indoinves.github.io/indoinves.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://indoinves.github.io/indoinves.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://indoinves.github.io/indoinves.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://indoinves.github.io/indoinves.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Indoinves - Global Market, Finance & Business News" />
+    <meta property="og:description" content="Get the latest updates on Macro Economy, Financial Markets, Technology, and Business News worldwide." />
+    <meta property="og:image" content="https://indoinves.github.io/indoinves.jpg" />
+    <meta property="og:url" content="https://indoinves.github.io/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Manifest JSON Link -->
+    <link rel="manifest" href="https://indoinves.github.io/manifest.json" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://indoinves.github.io/indoinves.png" type="image/png" />
+
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "Indoinves",
+      "url": "https://indoinves.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://indoinves.github.io/indoinves.png"
+      },
+      "sameAs": [
+        "https://facebook.com/indoinves",
+        "https://twitter.com/indoinves",
+        "https://linkedin.com/company/indoinves"
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #0b1f33;
+            --secondary-color: #16324f;
+            --accent-color: #1e824c;
+            --header-bg: #ffffff;
+            --text-color: #2b2b2b;
+            --bg-light: #f4f6f8;
+            --border-color: #e2e8f0;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-color); background-color: var(--bg-light); line-height: 1.6; }
+        
+        /* Header */
+        header { background: var(--header-bg); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo-container img { height: 42px; display: block; }
+        .search-box form input { padding: 9px 14px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 13px; width: 240px; outline: none; transition: border 0.2s; }
+        .search-box form input:focus { border-color: var(--accent-color); }
+
+        /* Responsive Navigation & Dropdown Styling */
+        nav { background: var(--primary-color); color: var(--white); position: relative; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.15); }
+        .nav-wrap { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
+        
+        .nav-container { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+        .nav-container li { position: relative; }
+        .nav-container li a { display: block; color: #e2e8f0; padding: 12px 14px; text-decoration: none; font-size: 13.5px; font-weight: 500; transition: background 0.2s, color 0.2s; white-space: nowrap; }
+        .nav-container li a:hover, .dropdown:hover > a { background: var(--secondary-color); color: var(--white); }
+        
+        /* Dropdown content */
+        .dropdown-content { display: none; position: absolute; background: var(--white); min-width: 200px; box-shadow: 0px 10px 25px rgba(0,0,0,0.15); z-index: 999; top: 100%; left: 0; border-radius: 0 0 6px 6px; overflow: hidden; border-top: 3px solid var(--accent-color); }
+        .dropdown-content a { color: var(--text-color) !important; padding: 11px 16px; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
+        .dropdown-content a:hover { background: #f8fafc; color: var(--accent-color) !important; padding-left: 20px; }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* Mobile Menu Toggle Button */
+        .menu-toggle { display: none; background: none; border: none; color: var(--white); font-size: 24px; cursor: pointer; padding: 8px; }
+
+        /* Responsive Breakpoint for Navigation */
+        @media(max-width: 1024px) {
+            .menu-toggle { display: block; }
+            .nav-wrap { flex-direction: column; align-items: flex-start; padding: 10px 15px; }
+            .nav-container { display: none; width: 100%; flex-direction: column; padding-bottom: 10px; }
+            .nav-container.active { display: flex; }
+            .nav-container li { width: 100%; border-top: 1px solid rgba(255,255,255,0.08); }
+            .dropdown-content { position: static; box-shadow: none; background: rgba(0,0,0,0.15); border-top: none; }
+            .dropdown-content a { color: #cbd5e1 !important; padding-left: 25px; }
+            .dropdown-content a:hover { background: rgba(0,0,0,0.25); color: #fff !important; }
+        }
+
+        /* Layout Grid */
+        .main-layout { max-width: 1200px; margin: 25px auto; display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; padding: 0 20px; }
+        @media(max-width: 900px) { .main-layout { grid-template-columns: 1fr; } }
+
+        /* Content Styles */
+        .content-area { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        h1 { font-size: 28px; color: var(--primary-color); margin-bottom: 15px; line-height: 1.3; }
+        .lead-text { font-size: 16px; font-weight: 600; color: #555; margin-bottom: 20px; }
+        
+        /* Table of Contents */
+        .toc { background: #f0f4f8; padding: 15px 20px; border-left: 4px solid var(--accent-color); margin: 20px 0; border-radius: 4px; }
+        .toc h3 { font-size: 18px; margin-bottom: 10px; color: var(--primary-color); }
+        .toc ul { padding-left: 20px; font-size: 14px; }
+        .toc li { margin-bottom: 5px; }
+        .toc a { color: var(--secondary-color); text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { font-size: 22px; color: var(--primary-color); margin: 25px 0 10px; }
+        h3 { font-size: 18px; color: var(--secondary-color); margin: 20px 0 8px; }
+        h4 { font-size: 16px; margin: 15px 0 5px; }
+        h5 { font-size: 14px; margin: 12px 0 5px; }
+        h6 { font-size: 13px; margin: 10px 0 5px; color: #666; }
+        p { margin-bottom: 15px; font-size: 15px; }
+
+        /* Sidebar Styles */
+        .sidebar { display: flex; flex-direction: column; gap: 25px; }
+        .widget { background: var(--white); padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .widget h3 { font-size: 16px; border-bottom: 2px solid var(--accent-color); padding-bottom: 8px; margin-bottom: 15px; color: var(--primary-color); }
+        .widget ul { list-style: none; }
+        .widget ul li { margin-bottom: 10px; font-size: 14px; }
+        .widget ul li a { color: var(--secondary-color); text-decoration: none; }
+        .widget ul li a:hover { text-decoration: underline; }
+
+        /* Gallery Grid */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; margin-top: 15px; }
+        .gallery-item { background: #ddd; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #777; }
+
+        /* FAQ Section */
+        .faq-box { background: #fafafa; border: 1px solid var(--border-color); padding: 15px; border-radius: 6px; margin-bottom: 15px; }
+        .faq-box h4 { margin-top: 0; color: var(--primary-color); }
+
+        /* Cookie Banner */
+        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: #111827; color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 2000; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); font-size: 14px; }
+        #cookie-banner button { background: var(--accent-color); color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        #cookie-banner button:hover { background: #166534; }
+
+        /* Footer */
+        footer { background: var(--primary-color); color: var(--white); padding: 40px 20px 20px; margin-top: 40px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-col h4 { font-size: 16px; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 8px; font-size: 14px; }
+        .footer-col ul li a { color: #cbd5e1; text-decoration: none; }
+        .footer-col ul li a:hover { color: #fff; text-decoration: underline; }
+        .footer-col p { font-size: 13px; color: #cbd5e1; line-height: 1.5; }
+        .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; font-size: 13px; color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="https://indoinves.github.io/">
+                    <img src="https://indoinves.github.io/indoinves.png" alt="Indoinves Logo">
+                </a>
+            </div>
+            <div class="search-box">
+                <form action="https://indoinves.github.io/" method="GET">
+                    <input type="text" placeholder="Search news, markets..." />
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigasi Dropdown Label Lengkap & Responsif -->
+    <nav>
+        <div class="nav-wrap">
+            <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation">☰ Menu</button>
+            <ul class="nav-container" id="main-nav-list">
+                <li><a href="https://indoinves.github.io/">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Market & Finance ▾</a>
+                    <div class="dropdown-content">
+                        <a href="https://indoinves.github.io/market/stocks">Stocks & Equities</a>
+                        <a href="https://indoinves.github.io/market/crypto">Cryptocurrency</a>
+                        <a href="https://indoinves.github.io/market/forex">Forex Trading</a>
+                    </div>
+                </li>
+                <li><a href="https://indoinves.github.io/macro-economy">Macro Economy</a></li>
+                <li><a href="https://indoinves.github.io/explainers">Explainers</a></li>
+                <li><a href="https://indoinves.github.io/manufacturing">Manufacturing</a></li>
+                <li><a href="https://indoinves.github.io/property">Property</a></li>
+                <li><a href="https://indoinves.github.io/health">Health</a></li>
+                <li><a href="https://indoinves.github.io/education">Education</a></li>
+                <li><a href="https://indoinves.github.io/lifestyle">Lifestyle</a></li>
+                <li><a href="https://indoinves.github.io/hospitality">Hospitality</a></li>
+                <li><a href="https://indoinves.github.io/tech-media">Tech & Media</a></li>
+                <li><a href="https://indoinves.github.io/smes">Smes</a></li>
+                <li><a href="https://indoinves.github.io/luxury">Luxury</a></li>
+                <li><a href="https://indoinves.github.io/whos-who">Who's Who</a></li>
+                <li class="dropdown">
+                    <a href="#">International ▾</a>
+                    <div class="dropdown-content">
+                        <a href="https://indoinves.github.io/intl/americas">Americas</a>
+                        <a href="https://indoinves.github.io/intl/europe">Europe</a>
+                        <a href="https://indoinves.github.io/intl/asia">Asia Pacific</a>
+                    </div>
+                </li>
+                <li><a href="https://indoinves.github.io/local-resources">Local Resources</a></li>
+                <li><a href="https://indoinves.github.io/politics">Politics</a></li>
+                <li><a href="https://indoinves.github.io/culture">Culture</a></li>
+                <li><a href="https://indoinves.github.io/science">Science</a></li>
+                <li><a href="https://indoinves.github.io/public-policy">Public Policy</a></li>
+                <li><a href="https://indoinves.github.io/business-news">Business News</a></li>
+                <li><a href="https://indoinves.github.io/sports">Sports</a></li>
+                <li><a href="https://indoinves.github.io/arts">Arts</a></li>
+                <li><a href="https://indoinves.github.io/celebrities">Celebrities</a></li>
+                <li><a href="https://indoinves.github.io/automotive">Automotive</a></li>
+                <li><a href="https://indoinves.github.io/commentary">Commentary</a></li>
+                <li><a href="https://indoinves.github.io/interview">Interview</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content & Sidebar Layout -->
+    <div class="main-layout">
+        
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <h1>Navigating Global Markets & Macro Economic Shifts</h1>
+            <p class="lead-text">Indoinves provides real-time updates, analytical deep-dives, financial intelligence, and structural business insights to a worldwide audience seeking authoritative coverage.</p>
+            
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#pengantar">1. Pengantar Dinamika Pasar Global</a></li>
+                    <li><a href="#analisis">2. Analisis Kebijakan Moneter & Suku Bunga</a></li>
+                    <li><a href="#transformasi">3. Transformasi Teknologi Finansial</a></li>
+                    <li><a href="#faq">4. Pertanyaan yang Sering Diajukan (FAQ)</a></li>
+                    <li><a href="#kesimpulan">5. Kesimpulan</a></li>
+                </ul>
+            </div>
+
+            <h2 id="pengantar">1. Pengantar Dinamika Pasar Global</h2>
+            <p>Pasar keuangan internasional saat ini menghadapi berbagai tantangan kompleks mulai dari fluktuasi inflasi hingga pergeseran geopolitik. Untuk memahami tren terkini, Anda dapat merujuk pada laporan mendalam dari <a href="https://www.reuters.com" target="_blank" rel="noopener">Reuters Financial News</a> dan analisis komprehensif oleh <a href="https://www.bloomberg.com" target="_blank" rel="noopener">Bloomberg Markets</a>.</p>
+            
+            <h3>1.1 Faktor Pendorong Utama Ekonomi Makro</h3>
+            <p>Kebijakan fiskal pemerintah di berbagai negara berkembang maupun maju memegang peranan vital. Kunjungi panduan resmi dari <a href="https://www.imf.org" target="_blank" rel="noopener">International Monetary Fund (IMF)</a> dan data statistik global di <a href="https://www.worldbank.org" target="_blank" rel="noopener">World Bank Open Data</a> untuk data yang valid.</p>
+            
+            <h2 id="analisis">2. Analisis Kebijakan Moneter & Suku Bunga</h2>
+            <p>Bank sentral global terus menyesuaikan suku bunga acuan guna meredam tekanan harga komoditas energi.</p>
+            
+            <h4>2.1 Pengaruh Terhadap Pasar Saham Domestik</h4>
+            <p>Koreksi pasar sering kali terjadi ketika likuiditas global mengalami pengetatan yang masif.</p>
+            
+            <h5>2.1.1 Strategi Alokasi Aset Portofolio</h5>
+            <p>Investor disarankan untuk mendiversifikasikan portofolio ke instrumen defensif.</p>
+            
+            <h6>2.1.1.1 Instrumen Pendapatan Tetap</h6>
+            <p>Obligasi pemerintah jangka pendek menawarkan imbal hasil menarik di tengah ketidakpastian.</p>
+            
+            <h2 id="transformasi">3. Transformasi Teknologi Finansial</h2>
+            <p>Adopsi kecerdasan buatan (AI) dan blockchain telah mengubah cara lembaga keuangan beroperasi. Pelajari standar keamanan digital dari <a href="https://www.iso.org" target="_blank" rel="noopener">ISO Standards</a> serta tren inovasi teknologi melalui <a href="https://techcrunch.com" target="_blank" rel="noopener">TechCrunch</a> dan <a href="https://www.wired.com" target="_blank" rel="noopener">Wired Magazine</a>.</p>
+
+            <!-- Internal Links Section (7 Links embedded/listed for SEO equity) -->
+            <h3 style="margin-top: 30px;">Eksplorasi Topik Terkait di Indoinves:</h3>
+            <ul style="margin-bottom: 25px; padding-left: 20px;">
+                <li><a href="https://indoinves.github.io/tools/banklocator.html">Peta & Direktori Bank Global</a></li>
+                <li><a href="https://indoinves.github.io/tools/investasi.html">Kalkulator Investasi Finansial</a></li>
+                <li><a href="https://indoinves.github.io/tools/saham.html">Analisis Pasar Saham Harian</a></li>
+                <li><a href="https://indoinves.github.io/tools/simulatorkripto-pro.html">Simulator Kripto Versi Pro</a></li>
+                <li><a href="https://indoinves.github.io/tools/simulatorsaham.html">Simulator Trading Saham Pemula</a></li>
+                <li><a href="https://indoinves.github.io/tools/website.html">Website & SEO Checker Tools</a></li>
+                <li><a href="https://indoinves.github.io/editorial">Pedoman & Kebijakan Editorial Indoinves</a></li>
+            </ul>
+
+            <h2 id="faq">4. Pertanyaan yang Sering Diajukan (FAQ)</h2>
+            <div class="faq-box">
+                <h4>Apa itu Indoinves?</h4>
+                <p>Indoinves adalah publikasi digital otoritatif yang menyajikan berita bisnis, analisis makroekonomi, dan intelijen pasar keuangan global.</p>
+            </div>
+            <div class="faq-box">
+                <h4>Bagaimana cara menggunakan tools gratis di Indoinves?</h4>
+                <p>Anda dapat mengakses berbagai kalkulator finansial, simulator saham, dan direktori bank secara gratis langsung melalui menu navigasi atau bagian footer website.</p>
+            </div>
+            <div class="faq-box">
+                <h4>Apakah informasi di Indoinves dapat dijadikan acuan investasi?</h4>
+                <p>Informasi yang disajikan bersifat edukatif dan analitis. Keputusan investasi tetap berada di tangan pembaca dengan mempertimbangkan profil risiko masing-masing.</p>
+            </div>
+
+            <h2 id="kesimpulan">5. Kesimpulan</h2>
+            <p>Menavigasi pasar global dan pergeseran makroekonomi membutuhkan akses informasi yang cepat, akurat, dan terpercaya. Indoinves berkomitmen untuk terus menyajikan data dan analisis berkualitas tinggi guna mendukung keputusan finansial pembaca di seluruh dunia.</p>
+        </main>
+
+        <!-- Sidebar Widgets -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Gallery Video</h3>
+                <div style="background:#000; color:#fff; height:140px; display:flex; align-items:center; justify-content:center; border-radius:4px; font-weight:bold;">Video Player Preview</div>
+            </div>
+
+            <div class="widget">
+                <h3>Gallery Image</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">Img 1</div>
+                    <div class="gallery-item">Img 2</div>
+                    <div class="gallery-item">Img 3</div>
+                    <div class="gallery-item">Img 4</div>
+                    <div class="gallery-item">Img 5</div>
+                    <div class="gallery-item">Img 6</div>
+                    <div class="gallery-item">Img 7</div>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3>Related News</h3>
+                <ul>
+                    <li><a href="#">Global Inflation Rates Stabilize in Q3</a></li>
+                    <li><a href="#">Central Banks Signal Shift in Monetary Policy</a></li>
+                    <li><a href="#">Tech Stocks Rally Amid AI Infrastructure Boom</a></li>
+                    <li><a href="#">Real Estate Market Trends in Metropolitan Cities</a></li>
+                    <li><a href="#">Green Energy Investments Surpass Fossil Fuels</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Most Popular</h3>
+                <ul>
+                    <li><a href="#">1. Top 10 Stocks to Watch This Month</a></li>
+                    <li><a href="#">2. Understanding Cryptocurrency Regulation 2026</a></li>
+                    <li><a href="#">3. Macro Economic Outlook for Emerging Markets</a></li>
+                    <li><a href="#">4. How to Build a Resilient Investment Portfolio</a></li>
+                    <li><a href="#">5. The Rise of Decentralized Finance (DeFi)</a></li>
+                    <li><a href="#">6. Global Supply Chain Adjustments Explained</a></li>
+                    <li><a href="#">7. Wealth Management Strategies for High Earners</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Special Topics</h3>
+                <ul>
+                    <li><a href="#">Global Trade Agreements & Tariffs</a></li>
+                    <li><a href="#">Digital Currency Integration</a></li>
+                    <li><a href="#">Sustainable Business Practices</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Most Popular Tags</h3>
+                <p style="font-size: 13px; color: #555;">
+                    <span style="background:#eee; padding:3px 8px; border-radius:3px; display:inline-block; margin:3px;">#Economy</span>
+                    <span style="background:#eee; padding:3px 8px; border-radius:3px; display:inline-block; margin:3px;">#Stocks</span>
+                    <span style="background:#eee; padding:3px 8px; border-radius:3px; display:inline-block; margin:3px;">#Crypto</span>
+                    <span style="background:#eee; padding:3px 8px; border-radius:3px; display:inline-block; margin:3px;">#Banking</span>
+                    <span style="background:#eee; padding:3px 8px; border-radius:3px; display:inline-block; margin:3px;">#Tech</span>
+                </p>
+            </div>
+
+            <div class="widget">
+                <h3>Latest News</h3>
+                <ul>
+                    <li><a href="#">New Tech Startup Funding Reaches Record High</a></li>
+                    <li><a href="#">European Markets Open Higher on Positive Trade Data</a></li>
+                    <li><a href="#">Asian Economies Show Resilience Amid Global Headwinds</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Cookie Consent -->
+    <div id="cookie-banner">
+        <span>We use cookies to enhance your user experience, analyze traffic, and serve personalized ads in accordance with our Privacy Policy.</span>
+        <button onclick="document.getElementById('cookie-banner').style.display='none'">Accept Cookies</button>
+    </div>
+    <script src="/popup-paypal.js"></script>
+<script src="/path/to/popup-paypal.js"></script>
+
+<button onclick="openPayPalModal()" class="bg-blue-600 px-4 py-2 rounded-lg text-white">Get Rewards Now $1000</button>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="https://indoinves.github.io/indoinves.png" alt="Indoinves Logo" style="height: 35px; margin-bottom: 15px; filter: brightness(0) invert(1);">
+                <p>Indoinves is an authoritative digital publication delivering high-impact news, macroeconomic analysis, financial market intelligence, and structural business insights to a worldwide readership.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Tools Free Indoinves</h4>
+                <ul>
+                    <li><a href="https://indoinves.github.io/tools/banklocator.html">Tools Peta & Direktori Bank Global</a></li>
+                    <li><a href="https://indoinves.github.io/tools/contentblog.html">Tools Konten Blog</a></li>
+                    <li><a href="https://indoinves.github.io/tools/investasi.html">Tools Kalkulator Investasi</a></li>
+                    <li><a href="https://indoinves.github.io/tools/saham.html">Tools Saham</a></li>
+                    <li><a href="https://indoinves.github.io/tools/simulatorkripto-pro.html">Tools Simulator Kripto Pro</a></li>
+                    <li><a href="https://indoinves.github.io/tools/simulatorkripto.html">Tools Simulator Kripto</a></li>
+                    <li><a href="https://indoinves.github.io/tools/simulatorsaham.html">Tools Simulator Saham</a></li>
+                    <li><a href="https://indoinves.github.io/tools/website.html">Tools Website / SEO Checker</a></li>
+                </ul>
+                
+                <!-- Unit Iklan Autorelaxed AdSense -->
+                <div style="margin: 25px 0;">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8423475960451668" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-8423475960451668"
+                    data-ad-slot="7183276396"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="https://indoinves.github.io/">Home</a></li>
+                    <li><a href="https://indoinves.github.io/about">About Us</a></li>
+                    <li><a href="https://indoinves.github.io/contact">Contact Us</a></li>
+                    <li><a href="https://indoinves.github.io/privacy">Privacy Policy</a></li>
+                    <li><a href="https://indoinves.github.io/sitemap">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Policies & Editorial</h4>
+                <ul>
+                    <li><a href="https://indoinves.github.io/disclaimer">Disclaimer</a></li>
+                    <li><a href="https://indoinves.github.io/terms">Terms On Conditional License</a></li>
+                    <li><a href="https://indoinves.github.io/editorial">Editorial Guidelines</a></li>
+                    <li><a href="https://indoinves.github.io/advertise">Advertise With Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Community & Careers</h4>
+                <ul>
+                    <li><a href="https://indoinves.github.io/join-team">Join the Team</a></li>
+                    <li><a href="https://indoinves.github.io/contact-forum">Contact Forum</a></li>
+                    <li><a href="https://indoinves.github.io/community">Komunitas Indoinves</a></li>
+                </ul>
+                
+                <!-- Unit Iklan Banner AdSense -->
+                <div style="margin: 25px 0;">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8423475960451668" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-8423475960451668"
+                    data-ad-slot="6147545291"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Indoinves - All Rights Reserved. Secured via HTTPS.</p>
+        </div>
+    </footer>
+
+    <!-- Script untuk Toggle Menu Mobile -->
+    <script>
+        const menuToggleBtn = document.getElementById('menu-toggle-btn');
+        const mainNavList = document.getElementById('main-nav-list');
+
+        menuToggleBtn.addEventListener('click', () => {
+            mainNavList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
